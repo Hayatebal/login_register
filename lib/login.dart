@@ -20,9 +20,9 @@ class _LoginPageState extends State<LoginPage> {
     final username = _usernameController.text.trim();
     final password = _passwordController.text;
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Login successful for $username.')),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text('Login successful for $username.')));
 
     Navigator.push(
       context,
@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('BALILA-ON')),
+      appBar: AppBar(title: const Text('Login/Register Task6 - Balila-on')),
       backgroundColor: const Color(0xFFEEF2FF),
       body: Center(
         child: SingleChildScrollView(
@@ -51,7 +51,9 @@ class _LoginPageState extends State<LoginPage> {
             constraints: const BoxConstraints(maxWidth: 480),
             child: Card(
               elevation: 8,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
               child: Padding(
                 padding: const EdgeInsets.all(24.0),
                 child: Column(
@@ -61,9 +63,8 @@ class _LoginPageState extends State<LoginPage> {
                     Text(
                       'Login',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                            fontWeight: FontWeight.bold,
-                          ),
+                      style: Theme.of(context).textTheme.headlineSmall
+                          ?.copyWith(fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 8),
                     Text(
@@ -120,7 +121,10 @@ class _LoginPageState extends State<LoginPage> {
                                   borderRadius: BorderRadius.circular(14),
                                 ),
                               ),
-                              child: const Text('Login', style: TextStyle(fontSize: 16)),
+                              child: const Text(
+                                'Login',
+                                style: TextStyle(fontSize: 16),
+                              ),
                             ),
                           ),
                         ],

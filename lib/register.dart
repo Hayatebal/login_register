@@ -56,7 +56,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('BALILA-ON')),
+      appBar: AppBar(title: const Text('Login/Register Task6 - Balila-on')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24.0),
         child: ConstrainedBox(
